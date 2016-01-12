@@ -18,6 +18,23 @@
     top: 0;
     width: 300px;
 }
+.left-div{
+  float: left;
+  margin: 300px 10px auto 75px;
+  position: absolute;
+}
+.mid-div{
+  float: left;
+  margin: 300px auto auto 490px;
+  position: absolute;
+}
+
+.right-div{
+  float: left;
+  margin: 300px auto auto 900px;
+  position: absolute;
+}
+
 .card:hover {
     height: 450px;
     width: 300px;
@@ -40,7 +57,7 @@
 .card:hover h2 small { color: #fff }
 .card:hover p { margin-top: 300px }
 .card_circle {
-    background: url('http://lorempixel.com/400/200') no-repeat center bottom;
+    background: url(trianglify.png) no-repeat center bottom;
     background-color: #3487f7;
     background-size: cover;
     border-radius: 50%;
@@ -67,8 +84,9 @@ p {
     font-size: 100%;
     font-weight: normal;
     margin-top: 200px;
+    padding: 0 20px;
     position: absolute;
-    text-align: center;
+    text-align: left;
     z-index: 9999;
 }
 .cta-container {
@@ -115,8 +133,6 @@ p {
 
 
 
-
-
 body.home {
 	background-image: url(gallery.png);
 	background-size: cover;
@@ -148,12 +164,13 @@ h1 {
 	color: white;
 	margin-left: 20px;
 	font-family: 'Raleway', sans-serif;
-	font-size: 60px;
+	font-size: 50px;
 	text-align: center;
 	max-width: 500px;
 	!min-height: 200px;
 	padding: 20px;
-	margin: 200px auto;
+	margin: 255px auto 200px auto;
+	font-weight: 200;
 }
 
 .aboutBox{
@@ -161,12 +178,14 @@ h1 {
 	color: black;
 	margin-left: 20px;
 	font-family: 'Raleway', sans-serif;
-	font-size: 28px;
+	font-size: 20px;
 	text-align: left;
 	max-width: 800px;
 	min-height: 400px;
 	padding: 20px;
-	margin: 200px auto;
+	margin: 200px auto auto auto;
+	font-weight: normal;
+  z-index: 9999;
 }
 
 .visitBox{
@@ -200,7 +219,7 @@ ul{
 
 li{
 	float: right;
-	
+
 }
 
 li a{
