@@ -89,6 +89,7 @@ p {
     text-align: left;
     z-index: 9999;
 }
+
 .cta-container {
     display: none;
     margin-top: 320px;
@@ -130,7 +131,39 @@ p {
 }
 
 
+.shop-card{
+  background-color: #fff;
+  bottom: 0;
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+-webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+-moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+  height: 300px;
+  left: 0;
+  margin: 80px 20px 20px 10px;
+  overflow: hidden;
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 300px;
+  z-index: 1;
+}
 
+.left-shop{
+  float: left;
+  margin: 80px 10px auto 75px;
+  position: absolute;
+}
+.mid-shop{
+  float: left;
+  margin: 80px auto auto 490px;
+  position: absolute;
+}
+
+.right-shop{
+  float: left;
+  margin: 80px auto auto 900px;
+  position: absolute;
+}
 
 
 body.home {
@@ -145,12 +178,21 @@ body.about{
 	background-size: cover;
 	background-color: rgb(66,87,102);
 	background-repeat:no-repeat;
+  background-attachment: fixed;
 }
 
 body.visit{
 	background-size: cover;
 	background-color: rgb(66,87,102);
 	background-repeat:no-repeat;
+}
+
+body.test{
+	background-image: url(leadingline.png);
+	background-size: cover;
+	background-color: rgb(66,87,102);
+	background-repeat:no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -181,9 +223,9 @@ h1 {
 	font-size: 20px;
 	text-align: left;
 	max-width: 800px;
-	min-height: 400px;
+	min-height: 350px;
 	padding: 20px;
-	margin: 200px auto auto auto;
+	margin: 200px auto 250px auto;
 	font-weight: normal;
   z-index: 9999;
 }
@@ -215,6 +257,7 @@ ul{
 	position: fixed;
 	top: 0;
 	width: 100%;
+  z-index: 3;
 }
 
 li{
@@ -238,6 +281,11 @@ li a:hover {
 .active {
     background-color: rgba(159, 111, 19, 1);
     color: white;
+}
+
+li a: active{
+  background-color: rgba(159, 111, 19, 1);
+  color: white;
 }
 
 .ghostButton {
@@ -264,3 +312,44 @@ li a:hover {
       body {
         background: black;
       }
+
+
+#cd-timeline {
+        position: relative;
+        padding: 2em 0;
+        margin-top: 2em;
+        margin-bottom: 2em;
+      }
+#cd-timeline::before {
+        /* this is the vertical line */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 18px;
+        height: 100%;
+        width: 4px;
+        background: #d7e4ed;
+      }
+      .cssanimations .cd-timeline-img.is-hidden {
+      visibility: hidden;
+    }
+    .cssanimations .cd-timeline-img.bounce-in {
+      visibility: visible;
+      animation: cd-bounce-1 0.6s;
+    }
+
+    @keyframes cd-bounce-1 {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+
+      60% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
