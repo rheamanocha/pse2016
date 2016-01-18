@@ -87,7 +87,7 @@ p {
     padding: 0 20px;
     position: absolute;
     text-align: left;
-    z-index: 9999;
+    z-index: 6;
 }
 
 .cta-container {
@@ -139,32 +139,32 @@ p {
 -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
   height: 300px;
   left: 0;
-  margin: 80px 20px 20px 10px;
+  margin: 50px 20px 20px 10px;
   overflow: hidden;
   position: relative;
   right: 0;
   top: 0;
   width: 300px;
   z-index: 1;
+
 }
 
 .left-shop{
-  float: left;
+  !float: left;
   margin: 80px 10px auto 75px;
   position: absolute;
 }
 .mid-shop{
-  float: left;
+  !float: left;
   margin: 80px auto auto 490px;
   position: absolute;
 }
 
 .right-shop{
-  float: left;
+  !float: left;
   margin: 80px auto auto 900px;
   position: absolute;
 }
-
 
 body.home {
 	background-image: url(gallery.png);
@@ -175,6 +175,14 @@ body.home {
 
 body.about{
 	background-image: url(leadingline.png);
+	background-size: cover;
+	background-color: rgb(66,87,102);
+	background-repeat:no-repeat;
+  background-attachment: fixed;
+}
+
+body.blog{
+	background-image: url(blog.png);
 	background-size: cover;
 	background-color: rgb(66,87,102);
 	background-repeat:no-repeat;
@@ -201,7 +209,7 @@ h1 {
 }
 
 .titleBox{
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0);
 	color: white;
 	color: white;
 	margin-left: 20px;
@@ -211,7 +219,7 @@ h1 {
 	max-width: 500px;
 	!min-height: 200px;
 	padding: 20px;
-	margin: 255px auto 200px auto;
+	margin: 250px auto 200px auto;
 	font-weight: 200;
 }
 
@@ -246,6 +254,7 @@ h1 {
 a{
 	color: white;
 	font-family: sans-serif;
+  !font-size: 17px;
 }
 
 ul{
@@ -253,11 +262,11 @@ ul{
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background: rgba(255, 255, 255, 0.5);
+	background: rgba(0, 0, 0, 0.5);
 	position: fixed;
 	top: 0;
 	width: 100%;
-  z-index: 3;
+  z-index: 7;
 }
 
 li{
@@ -270,6 +279,7 @@ li a{
 	color: white;
 	text-align: center;
 	padding: 14px 16px;
+  margin-right: 8px;
 	text-decoration: none;
 }
 
@@ -312,44 +322,11 @@ li a: active{
       body {
         background: black;
       }
-
-
-#cd-timeline {
-        position: relative;
-        padding: 2em 0;
-        margin-top: 2em;
-        margin-bottom: 2em;
-      }
-#cd-timeline::before {
-        /* this is the vertical line */
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 18px;
-        height: 100%;
-        width: 4px;
-        background: #d7e4ed;
-      }
-      .cssanimations .cd-timeline-img.is-hidden {
-      visibility: hidden;
-    }
-    .cssanimations .cd-timeline-img.bounce-in {
-      visibility: visible;
-      animation: cd-bounce-1 0.6s;
-    }
-
-    @keyframes cd-bounce-1 {
-      0% {
-        opacity: 0;
-        transform: scale(0.5);
-      }
-
-      60% {
-        opacity: 1;
-        transform: scale(1.2);
-      }
-
-      100% {
-        transform: scale(1);
-      }
-    }
+.comm{
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 700;
+}
